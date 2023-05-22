@@ -126,6 +126,7 @@ class VinylMix
             $width
         );
     }
+    
 
     public function getSlug(): ?string
     {
@@ -138,4 +139,5 @@ class VinylMix
 
         return $this;
     }
+    
 }
