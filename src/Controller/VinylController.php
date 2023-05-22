@@ -33,7 +33,7 @@ class VinylController extends AbstractController
         ]);
     }
 
-    #[Route('/browse/{slug}', name: 'app_browse')]
+   /* #[Route('/browse/{slug}', name: 'app_browse')]
     public function browse(VinylMixRepository $mixRepository, string $slug = null): Response
     {
         $genre = $slug ? u(str_replace('-', ' ', $slug))->title(true) : null;
@@ -45,4 +45,5 @@ class VinylController extends AbstractController
             'mixes' => $mixes,
         ]);
     }
+    */
 }
