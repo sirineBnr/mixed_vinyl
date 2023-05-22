@@ -12,11 +12,11 @@ use Symfony\Component\Routing\Annotation\Route;
 use function Symfony\Component\String\u;
 
 class VinylController extends AbstractController
-{/*
+{
     public function __construct(
         private bool $isDebug
     )
-    {}*/
+    {}
 
     #[Route('/', name: 'app_homepage')]
     public function homepage(): Response
@@ -44,8 +44,8 @@ class VinylController extends AbstractController
         $queryBuilder = $mixRepository->createOrderedByVotesQueryBuilder($slug);
         $adapter = new QueryAdapter($queryBuilder);
         $pagerfanta = Pagerfanta::createForCurrentPageWithMaxPerPage(
-            $adapter,
-            $request->query->get('page', 1),
+         $adapter,
+        $request->query->get('page', 1),
             9
         );
 
